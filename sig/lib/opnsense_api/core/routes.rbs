@@ -1,0 +1,11 @@
+module OPNsenseAPI
+  module Core
+    class Routes
+      include OPNsenseAPI::Core
+
+      def gateway: () -> Gateway
+
+      def routes: () -> Routes
+    end
+  end
+end

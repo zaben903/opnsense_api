@@ -1,0 +1,65 @@
+module OPNsenseAPI
+  module Core
+    class Unbound
+      class Settings
+        include OPNsenseAPI::Core
+
+        BASE_PATH: String
+
+        def add_domain_override: (?Hash[untyped, untyped] body) -> untyped
+
+        def add_forward: (?Hash[untyped, untyped] body) -> untyped
+
+        def add_host_alias: (?Hash[untyped, untyped] body) -> untyped
+
+        def add_host_override: (?Hash[untyped, untyped] body) -> untyped
+
+        def del_domain_override: (?Hash[untyped, untyped] body, uuid: String) -> untyped
+
+        def del_forward: (?Hash[untyped, untyped] body, uuid: String) -> untyped
+
+        def del_host_alias: (?Hash[untyped, untyped] body, uuid: String) -> untyped
+
+        def del_host_override: (?Hash[untyped, untyped] body, uuid: String) -> untyped
+
+        def get: (?Hash[untyped, untyped] params) -> untyped
+
+        def get_domain_override: (?Hash[untyped, untyped] params, ?uuid: String?) -> untyped
+
+        def get_forward: (?Hash[untyped, untyped] params, ?uuid: String?) -> untyped
+
+        def get_host_alias: (?Hash[untyped, untyped] params, ?uuid: String?) -> untyped
+
+        def get_host_override: (?Hash[untyped, untyped] params, ?uuid: String?) -> untyped
+
+        def get_nameservers: (?Hash[untyped, untyped] params) -> untyped
+
+        def search_domain_override: (?Hash[untyped, untyped] body) -> untyped
+
+        def search_forward: (?Hash[untyped, untyped] body) -> untyped
+
+        def search_host_alias: (?Hash[untyped, untyped] body) -> untyped
+
+        def search_host_override: (?Hash[untyped, untyped] body) -> untyped
+
+        def set: (?Hash[untyped, untyped] body) -> untyped
+
+        def set_domain_override: (?Hash[untyped, untyped] body, uuid: String) -> untyped
+
+        def set_forward: (?Hash[untyped, untyped] body, uuid: String) -> untyped
+
+        def set_host_alias: (?Hash[untyped, untyped] body, uuid: String) -> untyped
+
+        def set_host_override: (?Hash[untyped, untyped] body, uuid: String) -> untyped
+
+        def toggle_domain_override: (?Hash[untyped, untyped] body, uuid: String, ?enabled: bool?) -> untyped
+
+        def toggle_forward: (?Hash[untyped, untyped] body, uuid: String, ?enabled: bool?) -> untyped
+
+        def toggle_host_alias: (?Hash[untyped, untyped] body, uuid: String, ?enabled: bool?) -> untyped
+
+        def toggle_host_override: (?Hash[untyped, untyped] body, uuid: String, ?enabled: bool?) -> untyped
+      end
+    end
+  end
+end

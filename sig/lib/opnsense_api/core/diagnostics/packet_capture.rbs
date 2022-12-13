@@ -1,0 +1,29 @@
+module OPNsenseAPI
+  module Core
+    class Diagnostics
+      class PacketCapture
+        include OPNsenseAPI::Core
+
+        BASE_PATH: String
+
+        def download: (jobid: Integer) -> untyped
+
+        def get: (?Hash[untyped, untyped] params) -> untyped
+
+        def mac_info: (macaddr: String) -> untyped
+
+        def remove: (jobid: Integer) -> untyped
+
+        def search_jobs: (?Hash[untyped, untyped] params) -> untyped
+
+        def set: (?params: Hash[untyped, untyped], ?body: Hash[untyped, untyped]) -> untyped
+
+        def start: (jobid: Integer) -> untyped
+
+        def stop: (jobid: Integer) -> untyped
+
+        def view: (jobid: Integer, ?detail: String) -> untyped
+      end
+    end
+  end
+end

@@ -1,0 +1,55 @@
+module OPNsenseAPI
+  class Client
+    BASE_PATH: String
+
+    attr_reader host: URI
+    attr_reader api_key: String
+    attr_reader api_secret: String
+    attr_reader options: Hash[Symbol, untyped]
+
+    def initialize: (URI | String host, String api_key, String api_secret, **Hash[Symbol, untyped] options) -> void
+
+    def captive_portal: () -> Core::CaptivePortal
+
+    def core: () -> Core::Core
+
+    def cron: () -> Core::Cron
+
+    def diagnostics: () -> Core::Diagnostics
+
+    def firewall: () -> Core::Firewall
+
+    def ids: () -> Core::IDS
+
+    def interfaces: () -> Core::Interfaces
+
+    def ipsec: () -> Core::IPSec
+
+    def monit: () -> Core::Monit
+
+    def open_vpn: () -> Core::OpenVPN
+
+    def proxy: () -> Core::Proxy
+
+    def routes: () -> Core::Routes
+
+    def syslog: () -> Core::Syslog
+
+    def traffic_shaping: () -> Core::TrafficShaping
+
+    def unbound: () -> Core::Unbound
+
+    def get: (String path, ?Hash[untyped, untyped] params) -> untyped
+
+    def post: (String path, ?untyped body) -> untyped
+
+    private
+
+    @http: Net::HTTP
+    def http: -> Net::HTTP
+
+    def setup_request: (Net::HTTP::Get | Net::HTTP::Post request) -> void
+
+    def handle_response: (Net::HTTPResponse response) -> untyped
+  end
+end

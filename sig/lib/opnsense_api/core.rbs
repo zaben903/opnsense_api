@@ -1,0 +1,7 @@
+module OPNsenseAPI
+  module Core
+    @client: Client
+
+    def initialize: (Client client) -> void
+  end
+end

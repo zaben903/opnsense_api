@@ -1,0 +1,25 @@
+module OPNsenseAPI
+  module Core
+    class CaptivePortal
+      class Voucher
+        include OPNsenseAPI::Core
+
+        BASE_PATH: String
+
+        def drop_expired_vouchers: (provider: String, group: String, ?body: Hash[untyped, untyped]) -> untyped
+
+        def drop_voucher_group: (provider: String, group: String, ?body: Hash[untyped, untyped]) -> untyped
+
+        def expire_voucher: (provider: String, ?body: Hash[untyped, untyped]) -> untyped
+
+        def generate_vouchers: (provider: String, ?body: Hash[untyped, untyped]) -> untyped
+
+        def list_providers: () -> untyped
+
+        def list_voucher_groups: (provider: String) -> untyped
+
+        def list_vouchers: (provider: String, group: String) -> untyped
+      end
+    end
+  end
+end

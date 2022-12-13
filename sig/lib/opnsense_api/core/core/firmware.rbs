@@ -1,0 +1,37 @@
+module OPNsenseAPI
+  module Core
+    class Core
+      class Firmware
+        include OPNsenseAPI::Core
+
+        BASE_PATH: String
+
+        def poweroff: (?Hash[untyped, untyped] body) -> untyped
+
+        def reboot: (?Hash[untyped, untyped] body) -> untyped
+
+        def running: (?Hash[untyped, untyped] params) -> untyped
+
+        def get_firmware_config: (?Hash[untyped, untyped] params) -> untyped
+
+        def get_firmware_options: (?Hash[untyped, untyped] params) -> untyped
+
+        def set_firmware_config: (?Hash[untyped, untyped] body) -> untyped
+
+        def info: (?Hash[untyped, untyped] params) -> untyped
+
+        def status: (?params: Hash[untyped, untyped], ?body: Hash[untyped, untyped]) -> untyped
+
+        def audit: (?Hash[untyped, untyped] body) -> untyped
+
+        def update: (?Hash[untyped, untyped] body) -> untyped
+
+        def upgrade: (?Hash[untyped, untyped] body) -> untyped
+
+        def upgrade_status: (?Hash[untyped, untyped] params) -> untyped
+
+        def changelog: (version: String) -> untyped
+      end
+    end
+  end
+end

@@ -1,0 +1,13 @@
+module OPNsenseAPI
+  module Core
+    class Unbound
+      include OPNsenseAPI::Core
+
+      def diagnostics: () -> Diagnostics
+
+      def service: () -> Service
+
+      def settings: () -> Settings
+    end
+  end
+end

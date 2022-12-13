@@ -1,0 +1,25 @@
+module OPNsenseAPI
+  module Core
+    class IPSec
+      class Tunnel
+        include OPNsenseAPI::Core
+
+        BASE_PATH: String
+
+        def del_phase_1: (?Hash[untyped, untyped] body, ikeid: String) -> untyped
+
+        def del_phase_2: (?Hash[untyped, untyped] body, seqid: String) -> untyped
+
+        def search_phase_1: (?Hash[untyped, untyped] params) -> untyped
+
+        def search_phase_2: (?Hash[untyped, untyped] params) -> untyped
+
+        def toggle: (?Hash[untyped, untyped] body, ?enabled: String?) -> untyped
+
+        def toggle_phase_1: (?Hash[untyped, untyped] body, ikeid: String, ?enabled: String?) -> untyped
+
+        def toggle_phase_2: (?Hash[untyped, untyped] body, seqid: String, ?enabled: String?) -> untyped
+      end
+    end
+  end
+end

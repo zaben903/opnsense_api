@@ -1,0 +1,33 @@
+module OPNsenseAPI
+  module Core
+    class Diagnostics
+      class Firewall
+        include OPNsenseAPI::Core
+
+        BASE_PATH: String
+
+        def del_state: (stateid: Integer, creatorid: Integer) -> untyped
+
+        def flush_sources: (?Hash[untyped, untyped] body) -> untyped
+
+        def flush_states: (?Hash[untyped, untyped] body) -> untyped
+
+        def kill_states: (?Hash[untyped, untyped] body) -> untyped
+
+        def list_rule_ids: (?Hash[untyped, untyped] params) -> untyped
+
+        def log: (?Hash[untyped, untyped] params) -> untyped
+
+        def log_filters: (?Hash[untyped, untyped] params) -> untyped
+
+        def pf_statistics: (?section: String?) -> untyped
+
+        def query_pf_top: (?Hash[untyped, untyped] body) -> untyped
+
+        def query_states: (?Hash[untyped, untyped] body) -> untyped
+
+        def stats: (?Hash[untyped, untyped] params) -> untyped
+      end
+    end
+  end
+end

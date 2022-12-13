@@ -1,0 +1,21 @@
+module OPNsenseAPI
+  module Core
+    class IPSec
+      class Service
+        include OPNsenseAPI::Core
+
+        BASE_PATH: String
+
+        def reconfigure: (?Hash[untyped, untyped] body) -> untyped
+
+        def restart: (?Hash[untyped, untyped] body) -> untyped
+
+        def start: (?Hash[untyped, untyped] body) -> untyped
+
+        def status: (?Hash[untyped, untyped] params) -> untyped
+
+        def stop: (?Hash[untyped, untyped] body) -> untyped
+      end
+    end
+  end
+end

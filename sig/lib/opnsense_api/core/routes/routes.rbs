@@ -1,0 +1,29 @@
+module OPNsenseAPI
+  module Core
+    class Routes
+      class Routes
+        include OPNsenseAPI::Core
+
+        BASE_PATH: String
+
+        def add_route: (?Hash[untyped, untyped] body) -> untyped
+
+        def del_route: (?Hash[untyped, untyped] body, uuid: String) -> untyped
+
+        def get: (?Hash[untyped, untyped] params) -> untyped
+
+        def get_route: (?Hash[untyped, untyped] params, ?uuid: String?) -> untyped
+
+        def reconfigure: (?Hash[untyped, untyped] body) -> untyped
+
+        def search_route: (?Hash[untyped, untyped] body) -> untyped
+
+        def set: (?Hash[untyped, untyped] body) -> untyped
+
+        def set_route: (?Hash[untyped, untyped] body, uuid: String) -> untyped
+
+        def toggle_route: (?Hash[untyped, untyped] body, uuid: String, ?disabled: bool?) -> untyped
+      end
+    end
+  end
+end

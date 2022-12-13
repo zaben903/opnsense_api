@@ -1,0 +1,17 @@
+module OPNsenseAPI
+  module Core
+    class TrafficShaping
+      class Service
+        include OPNsenseAPI::Core
+
+        BASE_PATH: String
+
+        def flush_reload: (?Hash[untyped, untyped] body) -> untyped
+
+        def reconfigure: (?Hash[untyped, untyped] body) -> untyped
+
+        def statistics: (?Hash[untyped, untyped] params) -> untyped
+      end
+    end
+  end
+end

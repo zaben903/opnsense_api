@@ -1,0 +1,33 @@
+module OPNsenseAPI
+  module Core
+    class IDS
+      class Service
+        include OPNsenseAPI::Core
+
+        BASE_PATH: String
+
+        def drop_alert_log: (?Hash[untyped, untyped] body) -> untyped
+
+        def get_alert_info: (alertid: String, ?fileid: String?) -> untyped
+
+        def get_alert_logs: (?Hash[untyped, untyped] params) -> untyped
+
+        def query_alerts: (?Hash[untyped, untyped] body) -> untyped
+
+        def reconfigure: (?Hash[untyped, untyped] body) -> untyped
+
+        def reload_rules: (?Hash[untyped, untyped] body) -> untyped
+
+        def restart: (?Hash[untyped, untyped] body) -> untyped
+
+        def start: (?Hash[untyped, untyped] body) -> untyped
+
+        def status: (?Hash[untyped, untyped] params) -> untyped
+
+        def stop: (?Hash[untyped, untyped] body) -> untyped
+
+        def update_rules: (?Hash[untyped, untyped] body, ?wait: String?) -> untyped
+      end
+    end
+  end
+end

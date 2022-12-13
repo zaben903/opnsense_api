@@ -1,0 +1,17 @@
+module OPNsenseAPI
+  module Core
+    class Proxy
+      class Template
+        include OPNsenseAPI::Core
+
+        BASE_PATH: String
+
+        def get: (?Hash[untyped, untyped] params) -> untyped
+
+        def reset: (?Hash[untyped, untyped] body) -> untyped
+
+        def set: (?Hash[untyped, untyped] body) -> untyped
+      end
+    end
+  end
+end

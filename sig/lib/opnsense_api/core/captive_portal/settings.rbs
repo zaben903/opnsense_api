@@ -1,0 +1,25 @@
+module OPNsenseAPI
+  module Core
+    class CaptivePortal
+      class Settings
+        include OPNsenseAPI::Core
+
+        BASE_PATH: String
+
+        def add_zone: (?Hash[untyped, untyped] body) -> untyped
+
+        def del_zone: (uuid: String) -> untyped
+
+        def get: () -> untyped
+
+        def get_zone: (uuid: String) -> untyped
+
+        def search_zones: (?Hash[untyped, untyped] body) -> untyped
+
+        def set_zone: (uuid: String, ?body: Hash[untyped, untyped]) -> untyped
+
+        def toggle_zone: (uuid: String, ?enabled: bool?, ?body: Hash[untyped, untyped]) -> untyped
+      end
+    end
+  end
+end

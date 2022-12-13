@@ -1,0 +1,23 @@
+module OPNsenseAPI
+  module Core
+    class OpenVPN
+      class Export
+        include OPNsenseAPI::Core
+
+        BASE_PATH: String
+
+        def accounts: (?Hash[untyped, untyped] params, ?vpnid: String?) -> untyped
+
+        def download: (?Hash[untyped, untyped] body, vpnid: String, ?certref: String?) -> untyped
+
+        def providers: (?Hash[untyped, untyped] params) -> untyped
+
+        def store_presets: (?Hash[untyped, untyped] body, vpnid: String) -> untyped
+
+        def templates: (?Hash[untyped, untyped] params) -> untyped
+
+        def validate_presets: (?Hash[untyped, untyped] body, vpnid: String) -> untyped
+      end
+    end
+  end
+end

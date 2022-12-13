@@ -1,0 +1,9 @@
+module OPNsenseAPI
+  module Core
+    class Interfaces
+      class VLANSettings < Base
+        BASE_PATH: String
+      end
+    end
+  end
+end

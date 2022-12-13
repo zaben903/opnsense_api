@@ -1,0 +1,27 @@
+module OPNsenseAPI
+  module Core
+    class Firewall
+      class Category
+        include OPNsenseAPI::Core
+
+        BASE_PATH: String
+
+        def add_item: (?Hash[untyped, untyped] body) -> untyped
+
+        def del_item: (uuid: String) -> untyped
+
+        def get: (?Hash[untyped, untyped] params) -> untyped
+
+        def get_item: (?uuid: String?) -> untyped
+
+        def search_item: (?Hash[untyped, untyped] body) -> untyped
+
+        def search_no_category_item: (?Hash[untyped, untyped] body) -> untyped
+
+        def set: (?Hash[untyped, untyped] body) -> untyped
+
+        def set_item: (uuid: String, ?body: Hash[untyped, untyped]) -> untyped
+      end
+    end
+  end
+end

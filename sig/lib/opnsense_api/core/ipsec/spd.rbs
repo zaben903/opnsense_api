@@ -1,0 +1,15 @@
+module OPNsenseAPI
+  module Core
+    class IPSec
+      class SPD
+        include OPNsenseAPI::Core
+
+        BASE_PATH: String
+
+        def delete: (?Hash[untyped, untyped] body, id: String) -> untyped
+
+        def search: (?Hash[untyped, untyped] params) -> untyped
+      end
+    end
+  end
+end

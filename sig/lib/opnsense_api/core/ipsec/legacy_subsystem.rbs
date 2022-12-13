@@ -1,0 +1,15 @@
+module OPNsenseAPI
+  module Core
+    class IPSec
+      class LegacySubsystem
+        include OPNsenseAPI::Core
+
+        BASE_PATH: String
+
+        def apply_config: (?Hash[untyped, untyped] body) -> untyped
+
+        def status: (?Hash[untyped, untyped] params) -> untyped
+      end
+    end
+  end
+end

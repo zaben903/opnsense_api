@@ -1,0 +1,27 @@
+module OPNsenseAPI
+  module Core
+    class Syslog
+      class Settings
+        include OPNsenseAPI::Core
+
+        BASE_PATH: String
+
+        def add_destination: (?Hash[untyped, untyped] body) -> untyped
+
+        def del_destination: (?Hash[untyped, untyped] body) -> untyped
+
+        def get: (?Hash[untyped, untyped] params) -> untyped
+
+        def get_destination: (?Hash[untyped, untyped] params) -> untyped
+
+        def search_destination: (?Hash[untyped, untyped] body) -> untyped
+
+        def set: (?Hash[untyped, untyped] body) -> untyped
+
+        def set_destination: (?Hash[untyped, untyped] body, uuid: String) -> untyped
+
+        def toggle_destination: (?Hash[untyped, untyped] body, uuid: String, ?enabled: bool?) -> untyped
+      end
+    end
+  end
+end

@@ -1,0 +1,23 @@
+module OPNsenseAPI
+  module Core
+    class Unbound
+      class Diagnostics
+        include OPNsenseAPI::Core
+
+        BASE_PATH: String
+
+        def dump_cache: (?Hash[untyped, untyped] params) -> untyped
+
+        def dump_infra: (?Hash[untyped, untyped] params) -> untyped
+
+        def list_insecure: (?Hash[untyped, untyped] params) -> untyped
+
+        def list_local_data: (?Hash[untyped, untyped] params) -> untyped
+
+        def list_local_zones: (?Hash[untyped, untyped] params) -> untyped
+
+        def stats: (?Hash[untyped, untyped] params) -> untyped
+      end
+    end
+  end
+end

@@ -1,0 +1,15 @@
+module OPNsenseAPI
+  module Core
+    class Core
+      class Menu
+        include OPNsenseAPI::Core
+
+        BASE_PATH: String
+
+        def search: () -> untyped
+
+        def tree: () -> untyped
+      end
+    end
+  end
+end

@@ -1,0 +1,15 @@
+module OPNsenseAPI
+  module Core
+    class Diagnostics
+      class SystemHealth
+        include OPNsenseAPI::Core
+
+        BASE_PATH: String
+
+        def get_interfaces: (?Hash[untyped, untyped] params) -> untyped
+
+        def get_rrd_list: (?Hash[untyped, untyped] params) -> untyped
+      end
+    end
+  end
+end

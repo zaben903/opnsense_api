@@ -1,0 +1,13 @@
+module OPNsenseAPI
+  module Core
+    class Monit
+      class Status
+        include OPNsenseAPI::Core
+
+        BASE_PATH: String
+
+        def get: (?Hash[untyped, untyped] params) -> untyped
+      end
+    end
+  end
+end

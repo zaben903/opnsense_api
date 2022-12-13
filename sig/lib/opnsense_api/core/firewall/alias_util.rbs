@@ -1,0 +1,25 @@
+module OPNsenseAPI
+  module Core
+    class Firewall
+      class AliasUtil
+        include OPNsenseAPI::Core
+
+        BASE_PATH: String
+
+        def add: (id: String, ?body: Hash[untyped, untyped]) -> untyped
+
+        def aliases: (?Hash[untyped, untyped] params) -> untyped
+
+        def delete: (id: String) -> untyped
+
+        def find_references: (?Hash[untyped, untyped] body) -> untyped
+
+        def flush: (id: String, ?body: Hash[untyped, untyped]) -> untyped
+
+        def list: (id: String, ?params: Hash[untyped, untyped]) -> untyped
+
+        def update_bogons: (?Hash[untyped, untyped] params) -> untyped
+      end
+    end
+  end
+end

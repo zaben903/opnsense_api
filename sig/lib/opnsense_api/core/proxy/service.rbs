@@ -1,0 +1,29 @@
+module OPNsenseAPI
+  module Core
+    class Proxy
+      class Service
+        include OPNsenseAPI::Core
+
+        BASE_PATH: String
+
+        def download_acls: (?Hash[untyped, untyped] body) -> untyped
+
+        def fetch_acls: (?Hash[untyped, untyped] body) -> untyped
+
+        def reconfigure: (?Hash[untyped, untyped] body) -> untyped
+
+        def refresh_template: (?Hash[untyped, untyped] body) -> untyped
+
+        def reset: (?Hash[untyped, untyped] body) -> untyped
+
+        def restart: (?Hash[untyped, untyped] body) -> untyped
+
+        def start: (?Hash[untyped, untyped] body) -> untyped
+
+        def status: (?Hash[untyped, untyped] body) -> untyped
+
+        def stop: (?Hash[untyped, untyped] body) -> untyped
+      end
+    end
+  end
+end

@@ -1,0 +1,27 @@
+module OPNsenseAPI
+  module Core
+    class Cron
+      class Settings
+        include OPNsenseAPI::Core
+
+        BASE_PATH: String
+
+        def add_job: (Hash[untyped, untyped] body) -> untyped
+
+        def del_job: (uuid: String) -> untyped
+
+        def get: () -> untyped
+
+        def get_job: (?uuid: String?) -> untyped
+
+        def search_jobs: (Hash[untyped, untyped] body) -> untyped
+
+        def set: (Hash[untyped, untyped] body) -> untyped
+
+        def set_job: (uuid: String, ?body: Hash[untyped, untyped]) -> untyped
+
+        def toggle_job: (uuid: String, ?enabled: untyped?) -> untyped
+      end
+    end
+  end
+end

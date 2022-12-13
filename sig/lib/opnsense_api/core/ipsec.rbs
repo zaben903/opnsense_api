@@ -1,0 +1,25 @@
+module OPNsenseAPI
+  module Core
+    class IPSec
+      include OPNsenseAPI::Core
+
+      def key_pairs: () -> KeyPairs
+
+      def leases: () -> Leases
+
+      def legacy_subsystem: () -> LegacySubsystem
+
+      def pre_shared_keys: () -> PreSharedKeys
+
+      def sad: () -> SAD
+
+      def service: () -> Service
+
+      def sessions: () -> Sessions
+
+      def spd: () -> SPD
+
+      def tunnel: () -> Tunnel
+    end
+  end
+end

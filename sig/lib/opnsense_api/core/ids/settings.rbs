@@ -1,0 +1,75 @@
+module OPNsenseAPI
+  module Core
+    class IDS
+      class Settings
+        include OPNsenseAPI::Core
+
+        BASE_PATH: String
+
+        def add_policy: (?Hash[untyped, untyped] body) -> untyped
+
+        def add_policy_rule: (?Hash[untyped, untyped] body) -> untyped
+
+        def add_user_rule: (?Hash[untyped, untyped] body) -> untyped
+
+        def check_policy_rule: (?Hash[untyped, untyped] params) -> untyped
+
+        def del_policy: (uuid: String) -> untyped
+
+        def del_policy_rule: (uuid: String) -> untyped
+
+        def del_user_rule: (uuid: String) -> untyped
+
+        def get: (?Hash[untyped, untyped] params) -> untyped
+
+        def get_policy: (?uuid: String?) -> untyped
+
+        def get_policy_rule: (?uuid: String?) -> untyped
+
+        def get_rule_info: (?sid: String?) -> untyped
+
+        def get_ruleset: (id: String) -> untyped
+
+        def get_ruleset_properties: (?Hash[untyped, untyped] params) -> untyped
+
+        def get_user_rule: (?uuid: String?) -> untyped
+
+        def list_rule_metadata: (?Hash[untyped, untyped] params) -> untyped
+
+        def list_rulesets: (?Hash[untyped, untyped] params) -> untyped
+
+        def search_installed_rules: (?Hash[untyped, untyped] body) -> untyped
+
+        def search_policy: (?Hash[untyped, untyped] body) -> untyped
+
+        def search_policy_rule: (?Hash[untyped, untyped] body) -> untyped
+
+        def search_user_rule: (?Hash[untyped, untyped] body) -> untyped
+
+        def set: (?Hash[untyped, untyped] body) -> untyped
+
+        def set_policy: (?Hash[untyped, untyped] body, uuid: String) -> untyped
+
+        def set_policy_rule: (?Hash[untyped, untyped] body, uuid: String) -> untyped
+
+        def set_rule: (?Hash[untyped, untyped] body, sid: String) -> untyped
+
+        def set_ruleset: (?Hash[untyped, untyped] body, filename: untyped) -> untyped
+
+        def set_ruleset_properties: (?Hash[untyped, untyped] body) -> untyped
+
+        def set_user_rule: (?Hash[untyped, untyped] body, uuid: String) -> untyped
+
+        def toggle_policy: (uuid: String, ?enabled: untyped?) -> untyped
+
+        def toggle_policy_rule: (uuid: String, ?enabled: untyped?) -> untyped
+
+        def toggle_rule: (sid: String, ?enabled: untyped?) -> untyped
+
+        def toggle_ruleset: (id: String, ?enabled: untyped?) -> untyped
+
+        def toggle_user_rule: (uuid: String, ?enabled: untyped?) -> untyped
+      end
+    end
+  end
+end

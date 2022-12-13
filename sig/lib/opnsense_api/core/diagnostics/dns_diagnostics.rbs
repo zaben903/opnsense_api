@@ -1,0 +1,15 @@
+module OPNsenseAPI
+  module Core
+    class Diagnostics
+      class DNSDiagnostics
+        include OPNsenseAPI::Core
+
+        BASE_PATH: String
+
+        def get: (?Hash[untyped, untyped] params) -> untyped
+
+        def set: (?params: Hash[untyped, untyped], ?body: Hash[untyped, untyped]) -> untyped
+      end
+    end
+  end
+end

@@ -1,0 +1,15 @@
+module OPNsenseAPI
+  module Core
+    class Interfaces
+      include OPNsenseAPI::Core
+
+      def loopback_settings: () -> LoopbackSettings
+
+      def vip_settings: () -> VIPSettings
+
+      def vlan_settings: () -> VLANSettings
+
+      def vxlan_settings: () -> VXLANSettings
+    end
+  end
+end

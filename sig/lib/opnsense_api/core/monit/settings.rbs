@@ -1,0 +1,53 @@
+module OPNsenseAPI
+  module Core
+    class Monit
+      class Settings
+        include OPNsenseAPI::Core
+
+        BASE_PATH: String
+
+        def add_alert: (?Hash[untyped, untyped] body) -> untyped
+
+        def add_service: (?Hash[untyped, untyped] body) -> untyped
+
+        def add_test: (?Hash[untyped, untyped] body) -> untyped
+
+        def del_alert: (?Hash[untyped, untyped] body, uuid: String) -> untyped
+
+        def del_service: (?Hash[untyped, untyped] body, uuid: String) -> untyped
+
+        def del_test: (?Hash[untyped, untyped] body, uuid: String) -> untyped
+
+        def dirty: (?Hash[untyped, untyped] params) -> untyped
+
+        def get: (?Hash[untyped, untyped] params) -> untyped
+
+        def get_alert: (?Hash[untyped, untyped] params, ?uuid: String?) -> untyped
+
+        def get_general: (?Hash[untyped, untyped] params) -> untyped
+
+        def get_service: (?Hash[untyped, untyped] params, ?uuid: String?) -> untyped
+
+        def get_test: (?Hash[untyped, untyped] params, ?uuid: String?) -> untyped
+
+        def search_alert: (?Hash[untyped, untyped] body) -> untyped
+
+        def search_service: (?Hash[untyped, untyped] body) -> untyped
+
+        def search_test: (?Hash[untyped, untyped] body) -> untyped
+
+        def set: (?Hash[untyped, untyped] body) -> untyped
+
+        def set_alert: (?Hash[untyped, untyped] body, uuid: String) -> untyped
+
+        def set_service: (?Hash[untyped, untyped] body, uuid: String) -> untyped
+
+        def set_test: (?Hash[untyped, untyped] body, uuid: String) -> untyped
+
+        def toggle_alert: (?Hash[untyped, untyped] body, uuid: String, ?enabled: bool?) -> untyped
+
+        def toggle_service: (?Hash[untyped, untyped] body, uuid: String, ?enabled: bool?) -> untyped
+      end
+    end
+  end
+end

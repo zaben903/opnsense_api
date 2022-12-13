@@ -1,0 +1,21 @@
+module OPNsenseAPI
+  module Core
+    class CaptivePortal
+      class Service
+        include OPNsenseAPI::Core
+
+        BASE_PATH: String
+
+        def del_template: (uuid: String) -> untyped
+
+        def get_template: (?fileid: String?) -> untyped
+
+        def reconfigure: (?Hash[untyped, untyped] body) -> untyped
+
+        def save_template: (?Hash[untyped, untyped] body) -> untyped
+
+        def search_templates: (?Hash[untyped, untyped] body) -> untyped
+      end
+    end
+  end
+end

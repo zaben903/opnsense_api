@@ -1,0 +1,19 @@
+module OPNsenseAPI
+  module Core
+    class Core
+      class System
+        include OPNsenseAPI::Core
+
+        BASE_PATH: String
+
+        def dismiss_status: () -> untyped
+
+        def halt: () -> untyped
+
+        def reboot: () -> untyped
+
+        def status: () -> untyped
+      end
+    end
+  end
+end

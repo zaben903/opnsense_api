@@ -1,0 +1,15 @@
+module OPNsenseAPI
+  module Core
+    class Firewall
+      include OPNsenseAPI::Core
+
+      def alias: () -> Alias
+
+      def alias_util: () -> AliasUtil
+
+      def category: () -> Category
+
+      def filter_util: () -> FilterUtil
+    end
+  end
+end

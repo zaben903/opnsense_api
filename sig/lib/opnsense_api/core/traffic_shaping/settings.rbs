@@ -1,0 +1,51 @@
+module OPNsenseAPI
+  module Core
+    class TrafficShaping
+      class Settings
+        include OPNsenseAPI::Core
+
+        BASE_PATH: String
+
+        def add_pipe: (?Hash[untyped, untyped] body) -> untyped
+
+        def add_queue: (?Hash[untyped, untyped] body) -> untyped
+
+        def add_rule: (?Hash[untyped, untyped] body) -> untyped
+
+        def del_pipe: (?Hash[untyped, untyped] body, uuid: String) -> untyped
+
+        def del_queue: (?Hash[untyped, untyped] body, uuid: String) -> untyped
+
+        def del_rule: (?Hash[untyped, untyped] body, uuid: String) -> untyped
+
+        def get: (?Hash[untyped, untyped] params) -> untyped
+
+        def get_pipe: (?Hash[untyped, untyped] params, ?uuid: String?) -> untyped
+
+        def get_queue: (?Hash[untyped, untyped] params, ?uuid: String?) -> untyped
+
+        def get_rule: (?Hash[untyped, untyped] params, ?uuid: String?) -> untyped
+
+        def search_pipes: (?Hash[untyped, untyped] body) -> untyped
+
+        def search_queues: (?Hash[untyped, untyped] body) -> untyped
+
+        def search_rules: (?Hash[untyped, untyped] body) -> untyped
+
+        def set: (?Hash[untyped, untyped] body) -> untyped
+
+        def set_pipe: (?Hash[untyped, untyped] body, uuid: String) -> untyped
+
+        def set_queue: (?Hash[untyped, untyped] body, uuid: String) -> untyped
+
+        def set_rule: (?Hash[untyped, untyped] body, uuid: String) -> untyped
+
+        def toggle_pipe: (?Hash[untyped, untyped] body, uuid: String, ?enabled: bool?) -> untyped
+
+        def toggle_queue: (?Hash[untyped, untyped] body, uuid: String, ?enabled: bool?) -> untyped
+
+        def toggle_rule: (?Hash[untyped, untyped] body, uuid: String, ?enabled: bool?) -> untyped
+      end
+    end
+  end
+end

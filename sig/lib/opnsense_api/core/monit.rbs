@@ -1,0 +1,13 @@
+module OPNsenseAPI
+  module Core
+    class Monit
+      include OPNsenseAPI::Core
+
+      def service: () -> Service
+
+      def settings: () -> Settings
+
+      def status: () -> Status
+    end
+  end
+end

@@ -1,0 +1,19 @@
+module OPNsenseAPI
+  module Core
+    class CaptivePortal
+      class Session
+        include OPNsenseAPI::Core
+
+        BASE_PATH: String
+
+        def connect: (?zoneid: Integer, ?body: Hash[untyped, untyped]) -> untyped
+
+        def disconnect: (?zoneid: Integer, ?body: Hash[untyped, untyped]) -> untyped
+
+        def list: (?zoneid: Integer) -> untyped
+
+        def zones: () -> untyped
+      end
+    end
+  end
+end

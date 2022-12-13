@@ -1,0 +1,17 @@
+module OPNsenseAPI
+  module Core
+    class CaptivePortal
+      include OPNsenseAPI::Core
+
+      def access: () -> Access
+
+      def service: () -> Service
+
+      def session: () -> Session
+
+      def settings: () -> Settings
+
+      def voucher: () -> Voucher
+    end
+  end
+end

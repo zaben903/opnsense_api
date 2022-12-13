@@ -1,0 +1,13 @@
+module OPNsenseAPI
+  module Core
+    class Proxy
+      include OPNsenseAPI::Core
+
+      def service: () -> Service
+
+      def settings: () -> Settings
+
+      def template: () -> Template
+    end
+  end
+end

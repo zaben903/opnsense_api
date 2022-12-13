@@ -1,0 +1,15 @@
+module OPNsenseAPI
+  module Core
+    class IPSec
+      class Leases
+        include OPNsenseAPI::Core
+
+        BASE_PATH: String
+
+        def pools: (?Hash[untyped, untyped] params) -> untyped
+
+        def search: (?Hash[untyped, untyped] params) -> untyped
+      end
+    end
+  end
+end

@@ -1,0 +1,45 @@
+module OPNsenseAPI
+  module Core
+    class Diagnostics
+      class Interface
+        include OPNsenseAPI::Core
+
+        BASE_PATH: String
+
+        def carp_status: (status: String) -> untyped
+
+        def del_route: (?Hash[untyped, untyped] body) -> untyped
+
+        def flush_arp: (?Hash[untyped, untyped] body) -> untyped
+
+        def get_arp: (?Hash[untyped, untyped] params) -> untyped
+
+        def get_bpf_statistics: (?Hash[untyped, untyped] params) -> untyped
+
+        def get_interface_config: (?Hash[untyped, untyped] params) -> untyped
+
+        def get_interface_names: (?Hash[untyped, untyped] params) -> untyped
+
+        def get_memory_statistics: (?Hash[untyped, untyped] params) -> untyped
+
+        def get_ndp: (?Hash[untyped, untyped] params) -> untyped
+
+        def get_netisr_statistics: (?Hash[untyped, untyped] params) -> untyped
+
+        def get_pf_sync_statistics: (?Hash[untyped, untyped] params) -> untyped
+
+        def get_protocol_statistics: (?Hash[untyped, untyped] params) -> untyped
+
+        def get_routes: (?Hash[untyped, untyped] params) -> untyped
+
+        def get_socket_statistics: (?Hash[untyped, untyped] params) -> untyped
+
+        def get_vip_status: (?Hash[untyped, untyped] params) -> untyped
+
+        def search_arp: (?Hash[untyped, untyped] params) -> untyped
+
+        def search_ndp: (?Hash[untyped, untyped] params) -> untyped
+      end
+    end
+  end
+end

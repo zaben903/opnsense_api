@@ -1,0 +1,13 @@
+module OPNsenseAPI
+  module Core
+    class Diagnostics
+      class System
+        include OPNsenseAPI::Core
+
+        BASE_PATH: String
+
+        def memory: (?Hash[untyped, untyped] params) -> untyped
+      end
+    end
+  end
+end

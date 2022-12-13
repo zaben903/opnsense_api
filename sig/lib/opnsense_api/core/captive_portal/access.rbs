@@ -1,0 +1,17 @@
+module OPNsenseAPI
+  module Core
+    class CaptivePortal
+      class Access
+        include OPNsenseAPI::Core
+
+        BASE_PATH: String
+
+        def logoff: (?zoneid: Integer) -> untyped
+
+        def logon: (?zoneid: Integer, ?body: Hash[untyped, untyped]) -> untyped
+
+        def status: (?zoneid: Integer, ?body: Hash[untyped, untyped]) -> untyped
+      end
+    end
+  end
+end

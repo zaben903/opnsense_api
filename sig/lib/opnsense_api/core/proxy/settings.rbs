@@ -1,0 +1,61 @@
+module OPNsenseAPI
+  module Core
+    class Proxy
+      class Settings
+        include OPNsenseAPI::Core
+
+        BASE_PATH: String
+
+        def add_pac_match: (?Hash[untyped, untyped] body) -> untyped
+
+        def add_pac_proxy: (?Hash[untyped, untyped] body) -> untyped
+
+        def add_pac_rule: (?Hash[untyped, untyped] body) -> untyped
+
+        def add_remote_blacklist: (?Hash[untyped, untyped] body) -> untyped
+
+        def del_pac_match: (?Hash[untyped, untyped] body, uuid: String) -> untyped
+
+        def del_pac_proxy: (?Hash[untyped, untyped] body, uuid: String) -> untyped
+
+        def del_pac_rule: (?Hash[untyped, untyped] body, uuid: String) -> untyped
+
+        def del_remote_blacklist: (?Hash[untyped, untyped] body, uuid: String) -> untyped
+
+        def fetch_rb_cron: (?Hash[untyped, untyped] body) -> untyped
+
+        def get: (?Hash[untyped, untyped] params) -> untyped
+
+        def get_pac_match: (?Hash[untyped, untyped] params, ?uuid: String?) -> untyped
+
+        def get_pac_proxy: (?Hash[untyped, untyped] params, ?uuid: String?) -> untyped
+
+        def get_pac_rule: (?Hash[untyped, untyped] params, ?uuid: String?) -> untyped
+
+        def get_remote_blacklist: (?Hash[untyped, untyped] params, ?uuid: String?) -> untyped
+
+        def search_pac_match: (?Hash[untyped, untyped] body) -> untyped
+
+        def search_pac_proxy: (?Hash[untyped, untyped] body) -> untyped
+
+        def search_pac_rule: (?Hash[untyped, untyped] body) -> untyped
+
+        def search_remote_blacklists: (?Hash[untyped, untyped] body) -> untyped
+
+        def set: (?Hash[untyped, untyped] body) -> untyped
+
+        def set_pac_match: (?Hash[untyped, untyped] body, uuid: String) -> untyped
+
+        def set_pac_proxy: (?Hash[untyped, untyped] body, uuid: String) -> untyped
+
+        def set_pac_rule: (?Hash[untyped, untyped] body, uuid: String) -> untyped
+
+        def set_remote_blacklist: (?Hash[untyped, untyped] body, uuid: String) -> untyped
+
+        def toggle_pac_rule: (?Hash[untyped, untyped] body, uuid: String) -> untyped
+
+        def toggle_remote_blacklist: (?Hash[untyped, untyped] body, uuid: String) -> untyped
+      end
+    end
+  end
+end

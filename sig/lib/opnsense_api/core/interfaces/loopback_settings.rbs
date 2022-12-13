@@ -1,0 +1,9 @@
+module OPNsenseAPI
+  module Core
+    class Interfaces
+      class LoopbackSettings < Base
+        BASE_PATH: String
+      end
+    end
+  end
+end

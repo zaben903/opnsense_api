@@ -1,0 +1,11 @@
+module OPNsenseAPI
+  module Core
+    class Interfaces
+      class VIPSettings < Base
+        BASE_PATH: String
+
+        def get_unused_vhid: (?Hash[untyped, untyped] params) -> untyped
+      end
+    end
+  end
+end

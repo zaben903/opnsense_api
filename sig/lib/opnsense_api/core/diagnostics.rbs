@@ -1,0 +1,31 @@
+module OPNsenseAPI
+  module Core
+    class Diagnostics
+      include OPNsenseAPI::Core
+
+      def activity: () -> Activity
+
+      def dns: () -> DNS
+
+      def dns_diagnostics: () -> DNSDiagnostics
+
+      def firewall: () -> Firewall
+
+      def interface: () -> Interface
+
+      def lv_template: () -> LVTemplate
+
+      def netflow: () -> Netflow
+
+      def network_insight: () -> NetworkInsight
+
+      def packet_capture: () -> PacketCapture
+
+      def system: () -> System
+
+      def system_health: () -> SystemHealth
+
+      def traffic: () -> Traffic
+    end
+  end
+end

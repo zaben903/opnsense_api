@@ -1,0 +1,9 @@
+module OPNsenseAPI
+  module Core
+    class OpenVPN
+      include OPNsenseAPI::Core
+
+      def export: () -> Export
+    end
+  end
+end
