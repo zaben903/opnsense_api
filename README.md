@@ -1,4 +1,5 @@
 # OPNsenseAPI
+[![Gem Version](https://badge.fury.io/rb/opnsense_api.svg)](https://badge.fury.io/rb/opnsense_api)
 
 Library interacting with OPNsense's API.
 
