@@ -105,7 +105,7 @@ module OPNsenseAPI
     def post(path, body = {})
       request = Net::HTTP::Post.new("#{BASE_PATH}#{path}")
       setup_request(request)
-      request.body = body.to_json if body.any?
+      request.body = body.to_json
       handle_response(http.request(request))
     end
 

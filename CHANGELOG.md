@@ -1,5 +1,11 @@
 ## [Unreleased]
 
+## [0.2.1] - 2023-01-16
+
+### Fixed
+
+- Request body must be present on POST requests even if it is an empty Hash.
+
 ## [0.2.0] - 2023-01-16
 
 ### Breaking
