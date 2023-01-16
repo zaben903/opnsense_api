@@ -7,7 +7,7 @@ module OPNsenseAPI
     attr_reader api_secret: String
     attr_reader options: Hash[Symbol, untyped]
 
-    def initialize: (URI | String host, String api_key, String api_secret, **Hash[Symbol, untyped] options) -> void
+    def initialize: (host: URI | String, api_key: String , api_secret: String, **Hash[Symbol, untyped] options) -> void
 
     def captive_portal: () -> Core::CaptivePortal
 

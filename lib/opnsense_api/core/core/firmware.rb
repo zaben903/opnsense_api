@@ -79,6 +79,34 @@ module OPNsenseAPI
         def changelog(version:)
           @client.get("#{BASE_PATH}/changelog/#{version}")
         end
+
+        def install(pkg_name, body = {})
+          @client.post("#{BASE_PATH}/install/#{pkg_name}", body)
+        end
+
+        def reinstall(pkg_name, body = {})
+          @client.post("#{BASE_PATH}/reinstall/#{pkg_name}", body)
+        end
+
+        def remove(pkg_name, body = {})
+          @client.post("#{BASE_PATH}/remove/#{pkg_name}", body)
+        end
+
+        def lock(pkg_name, body = {})
+          @client.post("#{BASE_PATH}/lock/#{pkg_name}", body)
+        end
+
+        def unlock(pkg_name, body = {})
+          @client.post("#{BASE_PATH}/unlock/#{pkg_name}", body)
+        end
+
+        def details(pkg_name, body = {})
+          @client.post("#{BASE_PATH}/details/#{pkg_name}", body)
+        end
+
+        def license(pkg_name, body = {})
+          @client.post("#{BASE_PATH}/license/#{pkg_name}", body)
+        end
       end
     end
   end

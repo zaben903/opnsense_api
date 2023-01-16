@@ -24,7 +24,7 @@ module OPNsenseAPI
 
     attr_reader :host, :api_key, :api_secret, :options
 
-    def initialize(host, api_key, api_secret, **options)
+    def initialize(host:, api_key:, api_secret:, **options)
       @host = host.is_a?(URI) ? host : URI(host)
       @api_key = api_key
       @api_secret = api_secret

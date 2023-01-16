@@ -31,6 +31,20 @@ module OPNsenseAPI
         def upgrade_status: (?Hash[untyped, untyped] params) -> untyped
 
         def changelog: (version: String) -> untyped
+
+        def install: (String pkg_name, ?Hash[untyped, untyped] body) -> untyped
+
+        def reinstall: (String pkg_name, ?Hash[untyped, untyped] body) -> untyped
+
+        def remove: (String pkg_name, ?Hash[untyped, untyped] body) -> untyped
+
+        def lock: (String pkg_name, ?Hash[untyped, untyped] body) -> untyped
+
+        def unlock: (String pkg_name, ?Hash[untyped, untyped] body) -> untyped
+
+        def details: (String pkg_name, ?Hash[untyped, untyped] body) -> untyped
+
+        def license: (String pkg_name, ?Hash[untyped, untyped] body) -> untyped
       end
     end
   end

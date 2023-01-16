@@ -21,7 +21,7 @@ module OPNsenseAPI
       class System
         include OPNsenseAPI::Core
 
-        BASE_PATH = 'core/system'
+        BASE_PATH = '/core/system'
 
         def dismiss_status
           @client.get("#{BASE_PATH}/dismissStatus")
